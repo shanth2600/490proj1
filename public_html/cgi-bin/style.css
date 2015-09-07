@@ -1,0 +1,28 @@
+
+#app-container{
+	text-align: center;
+}
+
+.header{
+	text-align:center;
+}
+
+.task-container{
+	border:1px solid black;
+	border-bottom:0px;
+	height:30px;
+}
+
+.task-container button {
+    font-weight: bold;
+    background: none;
+    border: 0;
+    color: red;
+    padding: 0;
+    float: right;
+    margin-left: 10px;
+}
+
+.bottom-border{
+	border-bottom:1px solid black;
+}

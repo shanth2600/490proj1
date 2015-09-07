@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task Tracker</title>	
+	<link rel="stylesheet" href="https://www.csun.edu/~sh546459/bootstrap.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="col-xs-12 header">
+			<h1>To Do List</h1>
+		</div>
+		<div id="app-container" class="col-xs-4 col-xs-offset-4">
+			<div style="text-align:center">
+				<div v-repeat="task: tasks" class="task-container">
+					{{ task.body }}
+					<button v-on="click: deleteTask(task)">&#10007;</button>
+				</div>
+				<div v-if="tasks.length" class="bottom-border"></div>
+			</div>			
+			<form v-on="submit: addTask">
+				<input v-model='newTask' type="text">
+			</form>				
+		</div>
+		
+	</div>
+</body>
+<script src="http://www.csun.edu/~sh546459/cgi-bin/index.cgi?vue.js"></script>
+<script src="scripts.js"></script>
+</html>
