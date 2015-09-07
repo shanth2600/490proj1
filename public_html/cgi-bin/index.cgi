@@ -19,7 +19,7 @@
 
 # Add a content type and a blank line
 echo "X-COMP-490: ${USER}"
-echo "Content-type: text/plain"
+echo "Content-type: text/html"
 echo ""
 
 
@@ -31,12 +31,12 @@ if [ "${REQUEST_METHOD}" != "GET" ]; then
 fi
 
 
-
 if [ -n "${QUERY_STRING}" ] ; then
 	if [ "${QUERY_STRING}"  == "boot.css" ] ; then
 		style=`/usr/bin/curl http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css`
 		echo "$style"
 	else
+
 		cat  ./${QUERY_STRING}
 	fi
 fi
